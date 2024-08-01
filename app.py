@@ -38,7 +38,7 @@ def generate_random_number() -> int:
 
 # %%
 # var
-user_id: str = "9d5ffpvr3f"
+user_id: str = "9db9irafsf"
 
 # %%
 # get kemono no notes, kemonotes
