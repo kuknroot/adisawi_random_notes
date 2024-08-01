@@ -51,7 +51,7 @@ for n in range(5):
 # kurorekishi wo sentaku
 random_number: int = generate_random_number()
 selected_kemonotes: dict = kemono_notes_list[random_number]
-notes_url = f"""https;//misskey.io/notes/{selected_kemonotes["id"]}"""
+notes_id = selected_kemonotes["id"]
 cw = selected_kemonotes["cw"]
 text = selected_kemonotes["text"]
 
@@ -61,6 +61,3 @@ st.title("Adisawi@misskey.io さんノートガチャ")
 st.markdown(f"# {notes_url}")
 st.markdown(f"## {cw}")
 st.markdown(f"### {text}")
-
-if __name__ == '__main__':
-    pass
