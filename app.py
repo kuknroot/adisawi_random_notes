@@ -59,6 +59,9 @@ text = selected_kemonotes["text"]
 # %%
 # streamlit bu
 st.title("Adisawi@misskey.io さんノートガチャ")
-st.markdown(f"# {notes_url}")
-st.markdown(f"## {cw}")
-st.markdown(f"### {text}")
+st.markdown(f"# notes_url")
+st.markdown(f"**{notes_url}**")
+st.markdown(f"# cw")
+st.markdown(f"**{cw}**")
+st.markdown(f"# text")
+st.markdown(f"**{text}**")
