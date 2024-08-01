@@ -42,16 +42,17 @@ user_id: str = "9d5ffpvr3f"
 
 # %%
 # get kemono no notes, kemonotes
-kemono_notes_list = []
+kemono_notes_json_list = []
 n: int
 for n in range(5):
-    kemono_notes_list += make_adisawi_great_again(user_id, offset=n*100)
+    tmp_notes_json: dict = make_adisawi_great_again(user_id, offset=n*100).json()
+    kemono_notes_json_list += tmp_notes_json
 
 # %%
 # kurorekishi wo sentaku
 random_number: int = generate_random_number()
-selected_kemonotes: dict = kemono_notes_list[random_number]
-notes_id = selected_kemonotes["id"]
+selected_kemonotes: dict = kemono_notes_json_list[random_number]
+notes_id = f"""https;//misskey.io/notes/{selected_kemonotes["id"]}"""
 cw = selected_kemonotes["cw"]
 text = selected_kemonotes["text"]
 
